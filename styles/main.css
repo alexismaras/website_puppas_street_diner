@@ -1,9 +1,35 @@
 /* styles/main.css */
+
+
 body {
-    background-color: lightblue;
     font-family: Arial;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #FFB7CB 25%, transparent 25%), linear-gradient(225deg, #FFB7CB 25%, transparent 25%), linear-gradient(45deg, #FFB7CB 25%, transparent 25%), linear-gradient(315deg, #FFB7CB 25%, #FFC2D2 25%);
+    background-position:  150px 0, 150px 0, 0 0, 0 0;
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    /* margin: 0;
+    padding: 0; */
+}
+
+header {
+    background-color: #40E0D0;
+    height: 80px;
+    align-content: center;
+    border-radius: 8px;
 }
 
 h1 {
-    color: darkblue;
+    color: #fffefc;
+    text-align: center;
+}
+
+.content-panel {
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Prevent it from getting too wide */
+    margin: 50px auto; /* Vertical margin + horizontal auto-centering */
+    background: #fffefc;
+    padding: 30px;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
