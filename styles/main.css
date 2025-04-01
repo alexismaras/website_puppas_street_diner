@@ -2,34 +2,62 @@
 
 
 body {
-    font-family: Arial;
-    opacity: 1;
-    background-image:  linear-gradient(135deg, #FFB7CB 25%, transparent 25%), linear-gradient(225deg, #FFB7CB 25%, transparent 25%), linear-gradient(45deg, #FFB7CB 25%, transparent 25%), linear-gradient(315deg, #FFB7CB 25%, #FFC2D2 25%);
-    background-position:  150px 0, 150px 0, 0 0, 0 0;
-    background-size: 150px 150px;
-    background-repeat: repeat;
+    /* background-image:  linear-gradient(135deg, #47f2f5 25%, transparent 25%), linear-gradient(225deg, #47f2f5 25%, transparent 25%), linear-gradient(45deg, #47f2f5 25%, transparent 25%), linear-gradient(315deg, #47f2f5 25%, #74fcf8 25%);
+    background-position:  25 0, 25px 0, 0 0, 0 0;
+    background-size: 25px 25px; */
+
+    background-color: #fc9fb8;
+    background-image:  repeating-linear-gradient(45deg, #fc90ae 25%, transparent 25%, transparent 75%, #fc90ae 75%, #fc90ae), repeating-linear-gradient(45deg, #fc90ae 25%, #fc9fb8 25%, #fc9fb8 75%, #fc90ae 75%, #fc90ae);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+
     /* margin: 0;
     padding: 0; */
 }
 
 header {
-    background-color: #40E0D0;
-    height: 80px;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    top: 9%;
+    left: 50%;
+    position: fixed; 
+    /* background-color: #66deda; */
+    background-image:  linear-gradient(135deg, #47f2f5 25%, transparent 25%), linear-gradient(225deg, #47f2f5 25%, transparent 25%), linear-gradient(45deg, #47f2f5 25%, transparent 25%), linear-gradient(315deg, #47f2f5 25%, #74fcf8 25%);
+    background-position:  25 0, 25px 0, 0 0, 0 0;
+    background-size: 25px 25px;
+    height: 10vh;
     align-content: center;
-    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: #c40c0c;
+    border-style: solid;
+    overflow: visible;
 }
 
-h1 {
-    color: #fffefc;
+header h1 { /* Assuming text is inside an <h1> */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect center */
+    font-size: 130px;
+    margin: 0;
+    white-space: nowrap; /* Prevents line breaks */
+    color: #ffffff;
+    -webkit-text-stroke: 10px #000000;
+    paint-order: stroke fill; 
+    font-family: 'Brush Script MT';
     text-align: center;
+    text-shadow: 0 0 15px #000000;
 }
 
 .content-panel {
-    width: 80%; /* Adjust width as needed */
-    max-width: 1000px; /* Prevent it from getting too wide */
-    margin: 50px auto; /* Vertical margin + horizontal auto-centering */
+    width: 90%;
+    margin: 20vh auto; /* Removed vertical margin */
     background: #fffefc;
     padding: 30px;
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Optional: rounded corners */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensures padding is included in height */
 }
