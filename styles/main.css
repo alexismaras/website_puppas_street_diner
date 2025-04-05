@@ -58,34 +58,6 @@ body {
 }
 
 
-header {
-    transform: translate(-50%, 0%);
-    width: 100vw;
-    top: 0%;
-    left: 50%;
-    position: fixed; 
-    /* background-color: #f0f0f0; */
-    background: repeating-linear-gradient(
-        to bottom,
-        #d20117 0%,
-        #d20117 35%,
-        #f0f0f0 35%,
-        #f0f0f0 70%,
-        #d20117 70%,
-        #d20117 80%,
-        #f0f0f0 80%,
-        #f0f0f0 90%,
-        #d20117 90%,
-        #d20117 100%
-    );
-    background-size: 100% var(--header-height);;
-    height: var(--header-height);
-    text-align: center;
-    align-content: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    overflow: visible;
-}
-
 footer {
     background-color: #f0f0f0;
     position: absolute;
@@ -103,16 +75,6 @@ footer div {
                         repeating-linear-gradient(45deg, var(--footer-checkerboard-color) 25%, var(--footer-checkerboard-color-2) 25%, var(--footer-checkerboard-color-2) 75%, var(--footer-checkerboard-color) 75%, var(--footer-checkerboard-color));
     background-position: 0 0, calc(var(--footer-checkerboard-size)*0.5) calc(var(--footer-checkerboard-size)*0.5);
     background-size: var(--footer-checkerboard-size) var(--footer-checkerboard-size);
-}
-
-.logo {
-    position: absolute;
-    top: 70%;
-    left: 0;
-    transform: translate(0%, -50%);
-    width: 15vw;
-    height: 15vw;
-    filter: drop-shadow(0 0 5spx rgba(0, 0, 0, 0.2));
 }
 
 
@@ -203,18 +165,50 @@ a {
 
 /* Header Styles */
 .header-container {
+    transform: translate(-50%, 0%);
+    width: 100vw;
+    top: 0%;
+    left: 50%;
+    position: fixed; 
+    /* background-color: #f0f0f0; */
+    background: repeating-linear-gradient(
+        to bottom,
+        #d20117 0%,
+        #d20117 35%,
+        #f0f0f0 35%,
+        #f0f0f0 70%,
+        #d20117 70%,
+        #d20117 80%,
+        #f0f0f0 80%,
+        #f0f0f0 90%,
+        #d20117 90%,
+        #d20117 100%
+    );
+    background-size: 100% var(--header-height);;
+    height: var(--header-height);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* overflow: visible; */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background: #fff; /* Adjust to your design */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
   
-  .logo-container img {
-    height: 50px; /* Adjust as needed */
+  /* .logo-container img {
+    height: 50px;
     width: auto;
-  }
+  } */
+
+  .logo-container img {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translate(0%, -50%);
+    width: 15vw;
+    height: 15vw;
+    filter: drop-shadow(0 0 5spx rgba(0, 0, 0, 0.2));
+}
   
   /* Desktop Navigation */
   .desktop-nav ul {
