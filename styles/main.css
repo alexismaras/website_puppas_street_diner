@@ -2,10 +2,14 @@
 
 :root {
     --header-height: 10vh;
-    --footer-height: 20vh;
 
-    --container-bg: rgba(239, 232, 215, 0.4);
-    --container-bg-hover: rgba(239, 232, 215, 0.7);
+    --footer-height: 20vh;
+    --footer-checkerboard-size: 30px;
+    --footer-checkerboard-color: #000000;
+    --footer-checkerboard-color-2: #f0f0f0;
+
+    --container-bg: rgba(255, 255, 255, 0.4);
+    --container-bg-hover: rgba(255, 255, 255, 0.7);
     --container-border-color: transparent;
     --container-shadow: 0 0 10px rgba(0,0,0,0.1);
     --container-radius: 2vh;
@@ -92,6 +96,15 @@ footer {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+footer div {
+    height: 10vh;
+    background-color: var(--footer-checkerboard-color-2);
+    background-image:  repeating-linear-gradient(45deg, var(--footer-checkerboard-color) 25%, transparent 25%, transparent 75%, var(--footer-checkerboard-color) 75%, var(--footer-checkerboard-color)),
+                        repeating-linear-gradient(45deg, var(--footer-checkerboard-color) 25%, var(--footer-checkerboard-color-2) 25%, var(--footer-checkerboard-color-2) 75%, var(--footer-checkerboard-color) 75%, var(--footer-checkerboard-color));
+    background-position: 0 0, calc(var(--footer-checkerboard-size)*0.5) calc(var(--footer-checkerboard-size)*0.5);
+    background-size: var(--footer-checkerboard-size) var(--footer-checkerboard-size);
+}
+
 .logo {
     position: absolute;
     top: 70%;
@@ -139,29 +152,29 @@ footer {
 }
 
 li {
-    font-family: Futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 20px;
     display: inline;
     padding: 30px;
 }
 
 header li {
-    font-family: Futura;
-    font-size: 20px;
-    font-weight: 800;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
     display: inline;
     padding: 30px;
 }
 
 li:hover{
-    color:#d20117
+    color:#d20117;
 }
 
 #app-header li.active {
-    color: #EFE8AD;
-    font-weight: 300;
-    -webkit-text-stroke: 3px black; /* Stroke thickness and color */
-    paint-order: stroke fill;
+    color:#000000;
+    font-weight:600;
+    /* -webkit-text-stroke: 3px black;
+    paint-order: stroke fill; */
 }
 
 div {
@@ -172,4 +185,10 @@ div {
 a {
     text-decoration: none;
     color: #000000;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--container-radius) * 0.5);
 }

@@ -4,12 +4,12 @@ let appHeader = `
             <img src="logos/logo_prototype.svg" alt="Home" class="logo">
         </div>
         <div style="grid-column: 2;">
-            <a href="index.html"><li>Home</li></a>
-            <a href="about.html"><li>About</li></a>
-            <a href="menue.html"><li>Menu</li></a>
-            <a href="events.html"><li>Events</li></a>
-            <a href="bookings.html"><li>Bookings</li></a>
-            <a href="contact.html"><li>Contact</li></a>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="about.html"><li>ABOUT</li></a>
+            <a href="menue.html"><li>MENU</li></a>
+            <a href="events.html"><li>EVENTS</li></a>
+            <a href="bookings.html"><li>BOOKINGS</li></a>
+            <a href="contact.html"><li>CONTACT</li></a>
         </div>
         <link rel="stylesheet" href="styles/main.css">
     </div>
