@@ -158,7 +158,11 @@ li {
     padding: 30px;
 }
 
-header li {
+#app-header {
+    z-index: 1000;
+}
+
+#app-header li {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -191,4 +195,76 @@ a {
     height: 100%;
     width: 100%;
     border-radius: calc(var(--container-radius) * 0.5);
+    z-index: 1;
 }
+
+
+
+
+/* Mobile-first styles */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #fff;
+    padding-top: 80px;
+    transition: 0.3s;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-item {
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .nav-item a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    
+    .nav-menu {
+      position: static;
+      width: auto;
+      height: auto;
+      padding-top: 0;
+      background: transparent;
+      box-shadow: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .nav-item {
+      margin: 0 15px;
+    }
+  }
